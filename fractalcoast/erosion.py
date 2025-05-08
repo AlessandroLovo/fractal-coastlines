@@ -44,7 +44,7 @@ class Roll8(Roll4):
         if isinstance(direction, int):
             direction = self.directions[direction]
 
-        if direction in super().directions:
+        if direction in ['N', 'E', 'S', 'W']:
             return super().__call__(array, direction, fill_value)
         
         if direction == 'NE':
